@@ -11,8 +11,6 @@ jobs:
         uses: megacorp-actions/log-execution@v1.1
         with:
           repository: ${{ github.repository.name }}
-        outputs:
-          execution-time: ${{ steps.log-execution.outputs.execution-time }}
 
 
       - name: initialise
