@@ -1,0 +1,23 @@
+name: build
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Execution
+        id: log-execution
+        uses: megacorp-actions/log-execution@v1.1
+        with:
+          repository: ${{ github.repository.name }}
+        outputs:
+          execution-time: ${{ steps.log-execution.outputs.execution-time }}
+
+
+      - name: initialise
+        run: \
+           REPO_NAME=${{ github.repository.name }} \
+           echo "$REPO_NAME ran at ${{ needs.build.outputs.log-execution }}"
+
+        
