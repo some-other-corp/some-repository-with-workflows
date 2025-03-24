@@ -10,12 +10,12 @@ jobs:
         id: log-execution
         uses: megacorp-actions/log-execution@v1.1.1
         with:
-          repository: ${{ github.repository.name }}
+          repository: ${{ github.event.repository.name }}
 
 
-      - name: initialise
+      - name: Print Results
         run: |
-           REPO_NAME=${{ github.repository.name }} \
+           REPO_NAME=${{ github.event.repository.name }} \
            echo "$REPO_NAME ran at ${{ needs.build.outputs.log-execution }}"
 
         
