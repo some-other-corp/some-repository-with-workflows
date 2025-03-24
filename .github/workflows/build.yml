@@ -1,4 +1,4 @@
-name: build
+name: Build
 on:
   workflow_dispatch
 
@@ -16,6 +16,6 @@ jobs:
       - name: Print Results
         run: |
            REPO_NAME=${{ github.event.repository.name }} \
-           echo "$REPO_NAME ran at ${{ needs.build.outputs.log-execution }}"
+           echo "$REPO_NAME ran at ${{ steps.log-execution.outputs.execution-time }}"
 
         
