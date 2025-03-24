@@ -15,6 +15,6 @@ jobs:
 
       - name: Print Results
         run: |
-           echo ${{ github.event.repository.name }} "ran at ${{ steps.log-execution.outputs.execution-time }}"
+           echo "${{ github.event.repository.name }} ran at ${{ steps.log-execution.outputs.execution-time }}"
 
         
