@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Log Execution
         id: log-execution
-        uses: megacorp-actions/log-execution@v1.1
+        uses: megacorp-actions/log-execution@v1.1.1
         with:
           repository: ${{ github.repository.name }}
 
